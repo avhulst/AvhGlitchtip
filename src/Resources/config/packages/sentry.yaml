@@ -1,0 +1,8 @@
+sentry:
+    dsn: '%env(default::GLITCHTIP_DSN)%'
+    register_error_listener: true
+    register_error_handler: true
+    options:
+        environment: '%kernel.environment%'
+        send_default_pii: false
+        traces_sample_rate: 0

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>GlitchTip Connection</title>
+        <title lang="de-DE">GlitchTip Verbindung</title>
+
+        <input-field type="bool">
+            <name>enabled</name>
+            <label>Enable Error Tracking</label>
+            <label lang="de-DE">Error Tracking aktivieren</label>
+            <defaultValue>false</defaultValue>
+            <helpText>Enable or disable GlitchTip error tracking. When disabled, the environment variable GLITCHTIP_DSN is used as fallback.</helpText>
+            <helpText lang="de-DE">GlitchTip Error Tracking aktivieren oder deaktivieren. Bei Deaktivierung wird die Umgebungsvariable GLITCHTIP_DSN als Fallback verwendet.</helpText>
+        </input-field>
+
+        <input-field type="password">
+            <name>dsn</name>
+            <label>DSN</label>
+            <label lang="de-DE">DSN</label>
+            <helpText>The DSN from your GlitchTip project. Overrides the GLITCHTIP_DSN environment variable.</helpText>
+            <helpText lang="de-DE">Die DSN aus Ihrem GlitchTip-Projekt. Überschreibt die Umgebungsvariable GLITCHTIP_DSN.</helpText>
+        </input-field>
+
+        <input-field>
+            <name>environment</name>
+            <label>Environment</label>
+            <label lang="de-DE">Umgebung</label>
+            <helpText>Override the environment tag. Leave empty to auto-detect from APP_ENV.</helpText>
+            <helpText lang="de-DE">Umgebung überschreiben. Leer lassen für automatische Erkennung aus APP_ENV.</helpText>
+        </input-field>
+
+        <input-field>
+            <name>release</name>
+            <label>Release</label>
+            <label lang="de-DE">Release</label>
+            <helpText>Override the release tag. Leave empty for automatic detection (shopware@version).</helpText>
+            <helpText lang="de-DE">Release-Tag überschreiben. Leer lassen für automatische Erkennung (shopware@version).</helpText>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Sampling</title>
+        <title lang="de-DE">Sampling</title>
+
+        <input-field type="float">
+            <name>errorSampleRate</name>
+            <label>Error Sample Rate</label>
+            <label lang="de-DE">Fehler-Sample-Rate</label>
+            <defaultValue>1.0</defaultValue>
+            <helpText>Percentage of errors to capture (0.0 = none, 1.0 = all).</helpText>
+            <helpText lang="de-DE">Anteil der zu erfassenden Fehler (0.0 = keine, 1.0 = alle).</helpText>
+        </input-field>
+
+        <input-field type="float">
+            <name>tracesSampleRate</name>
+            <label>Traces Sample Rate</label>
+            <label lang="de-DE">Traces-Sample-Rate</label>
+            <defaultValue>0.0</defaultValue>
+            <helpText>Percentage of transactions to capture for performance monitoring (0.0 = none, 1.0 = all).</helpText>
+            <helpText lang="de-DE">Anteil der Transaktionen für Performance-Monitoring (0.0 = keine, 1.0 = alle).</helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>sendDefaultPii</name>
+            <label>Send PII</label>
+            <label lang="de-DE">PII senden</label>
+            <defaultValue>false</defaultValue>
+            <helpText>Send personally identifiable information (IP address, user data). Consider GDPR implications.</helpText>
+            <helpText lang="de-DE">Personenbezogene Daten senden (IP-Adresse, Benutzerdaten). DSGVO-Auswirkungen beachten.</helpText>
+        </input-field>
+    </card>
+</config>

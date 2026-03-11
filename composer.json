@@ -1,0 +1,36 @@
+{
+    "name": "avh/glitchtip",
+    "description": "GlitchTip/Sentry error tracking integration for Shopware",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas van Hulst",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "sentry/sentry-symfony": "^5.0"
+    },
+    "conflict": {
+        "shopware/core": "<6.6 || >=6.8"
+    },
+    "extra": {
+        "shopware-plugin-class": "AvhGlitchtip\\AvhGlitchtip",
+        "label": {
+            "de-DE": "GlitchTip Error Tracking",
+            "en-GB": "GlitchTip Error Tracking"
+        },
+        "description": {
+            "de-DE": "Integriert GlitchTip/Sentry Error Tracking in Shopware",
+            "en-GB": "Integrates GlitchTip/Sentry error tracking into Shopware"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AvhGlitchtip\\": "src/"
+        }
+    }
+}
