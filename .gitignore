@@ -1,0 +1,5 @@
+/composer.lock
+**/node_modules
+**/*.sql.gz
+**/*.sql
+vendor
